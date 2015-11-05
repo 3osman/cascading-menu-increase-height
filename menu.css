@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    width: 1024px;
+}
+a:link {
+    text-decoration: none;
+}
+#nav {
+    background: #111 repeat-x top left;
+    height: 37px;
+}
+#nav,
+#nav li {
+    display: block;
+    list-style: none;
+    position: relative;
+    z-index: 82;
+}
+#nav > li {
+    float: left;
+    z-index: 82;
+}
+#nav > li:hover {
+    background: #222 repeat-x top left;
+}
+#nav a {
+    display: block;
+    line-height: 37px;
+    padding: 0 0.5em;
+    z-index: 82;
+    position: relative;
+    color: #ccc;
+    font-size: 15px;
+}
+#nav a:hover {
+    color: #fff;
+}
+/* Subnav Menu */
+
+#nav .submenu {
+    display: none;
+    position: absolute;
+    z-index: 80;
+    background: white;
+    border: 1px solid #000;
+    left: 0px;
+    top: 37px;
+    min-width: 100%;
+}
+#nav .submenu a {
+    color: black;
+}
+#nav .submenu li {
+    display: block;
+    line-height: 27px !important;
+}
+#nav .submenu li:hover {
+    background: #337ab7;
+}
+#nav .submenu a {
+    display: block;
+    line-height: 27px !important;
+    white-space: nowrap;
+}
+#nav > li:hover .submenu {
+    display: block;
+}
+/* Hide next level of subnavigation */
+
+#nav > li:hover > .submenu .submenu {
+    display: none;
+}
+#nav .padding {
+    display: block;
+    position: absolute;
+    z-index: 78;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: none !important;
+}
+/* Padding amount for first-level dropdown */
+
+#nav > li > .submenu > .padding {
+    width: 160%;
+    left: -30%;
+    
+    height: 140%;
+}
+#nav .buffer {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: none !important;
+}
+#nav .shadow {
+    display: none !important;
+}
+/*	Third-level Subnavigation */
+
+#nav .submenu .submenu {
+    position: absolute;
+    left: 100%;
+    top: -1px;
+}
+#nav .submenu .submenu .padding {
+    width: 150%;
+    top: -35%;
+    height: 170%;
+}
+/*	Show subnavigation */
+
+#nav > li:hover .submenu li:hover > .submenu {
+    display: block;
+    z-index: 70 !important;
+}
+/* CSS3 Transition Handling */
+
+#nav.use-trans li > .submenu {
+    opacity: 0;
+    display: block !important;
+    left: -9999px !important;
+    
+    transition: 0.2s opacity ease-in, 0s left linear 0.22s;
+}
+/* Hide next level of subnavigation */
+
+#nav.use-trans > li:hover > .submenu .submenu {
+    display: block !important;
+    left: -9999px !important;
+}
+
+#nav.use-trans > li:hover > .submenu,
+#nav.use-trans > li > .submenu li:hover > .submenu {
+    opacity: 1 !important;
+    
+    transition-delay: 0s;
+}
+#nav.use-trans > li:hover > .submenu {
+    left: 0px !important;
+}
+#nav.use-trans > li > .submenu li:hover > .submenu {
+    left: 100% !important;
+}
+
+
+#nav ul a {
+    position: relative;
+}
+#nav ul a span {
+    background-color: #5a5a5a;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+}
