@@ -26,12 +26,12 @@
                               <a href="#">Third Subitem &nbsp;&nbsp;&nbsp;&raquo;<span></span></a>
                               <div class="submenu">
                                  <ul>
-                                    <li><a href="#">1<span></span></a></li>
-                                    <li><a href="#">2<span></span></a></li>
-                                    <li><a href="#">3<span></span></a></li>
-                                    <li><a href="#">4<span></span></a></li>
-                                    <li><a href="#">5<span></span></a></li>
-                                    <li><a href="#">6<span></span></a></li>
+                                    <li><a id="one" href="#">1<span></span></a></li>
+                                    <li><a id="two" href="#">2<span></span></a></li>
+                                    <li><a id="three" href="#">3<span></span></a></li>
+                                    <li><a id="four" href="#">4<span></span></a></li>
+                                    <li><a id="five" href="#">5<span></span></a></li>
+                                    <li><a id="six" href="#">6<span></span></a></li>
                                  </ul>
                                  <div class="padding"></div>
                                  <div class="shadow"></div>
@@ -58,10 +58,10 @@
                   <div class="submenu">
                      <ul>
                         
-                        <li><a href="#">First Subitem<span></span></a></li>
-                        <li><a href="#">Second Subitem<span></span></a></li>
-                        <li><a href="#">Third Subitem<span></span></a></li>
-                        <li><a href="#">Fourth Subitem<span></span></a></li>
+                        <li><a id="first" href="#">First Subitem<span></span></a></li>
+                        <li><a id="second" href="#">Second Subitem<span></span></a></li>
+                        <li><a id="third" href="#">Third Subitem<span></span></a></li>
+                        <li><a id="fourth" href="#">Fourth Subitem<span></span></a></li>
                      </ul>
                   </div>
                </li>
@@ -76,7 +76,20 @@
         
         
       </ul>
-      
+      <script type="text/javascript">
+            document.getElementById("one").onclick = function() { alert("1 is clicked"); }
+            document.getElementById("two").onclick = function() { alert("2 is clicked"); }
+            document.getElementById("three").onclick = function() { alert("3 is clicked"); }
+            document.getElementById("four").onclick = function() { alert("4 is clicked"); }
+            document.getElementById("five").onclick = function() { alert("5 is clicked"); }
+            document.getElementById("six").onclick = function() { alert("6 is clicked"); }
+            document.getElementById("first").onclick = function() { alert("First is clicked"); }
+            document.getElementById("second").onclick = function() { alert("Second is clicked"); }
+            document.getElementById("third").onclick = function() { alert("Third is clicked"); }
+            document.getElementById("fourth").onclick = function() { alert("Fourth is clicked"); }
+
+
+      </script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
    </body>
